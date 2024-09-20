@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Kasir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            min-height: 100vh;
+            background-color: #343a40;
+            color: white;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .product-card {
+            transition: transform .2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 sidebar d-md-block">
+            <h4 class="text-center">Kasir POS</h4>
+            <a href="#">Dashboard</a>
+            <a href="#">Transaksi Baru</a>
+            <a href="#">Produk</a>
+            <a href="#">Riwayat Transaksi</a>
+            <a href="#">Laporan</a>
+            <a href="#">Pengaturan</a>
+            <a href="#">Logout</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 main-content">
+            <header class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+                <h1>Transaksi Baru</h1>
+                <div>
+                    <span class="badge bg-primary">Kasir: Admin</span>
+                    <span class="badge bg-success">Tanggal: 19 September 2024</span>
+                </div>
+            </header>
+
+            <div class="row">
+                <!-- List of Products -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card product-card">
+                                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Product 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Produk 1</h5>
+                                    <p class="card-text">Rp 10.000</p>
+                                    <a href="#" class="btn btn-primary">Tambah ke Keranjang</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card product-card">
+                                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Product 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Produk 2</h5>
+                                    <p class="card-text">Rp 15.000</p>
+                                    <a href="#" class="btn btn-primary">Tambah ke Keranjang</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tambah produk lain sesuai kebutuhan -->
+                    </div>
+                </div>
+
+                <!-- Shopping Cart -->
+                <div class="col-md-4">
+                    <h4>Keranjang Belanja</h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Produk 1 <span class="badge bg-primary rounded-pill">1 x Rp 10.000</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Produk 2 <span class="badge bg-primary rounded-pill">2 x Rp 15.000</span>
+                        </li>
+                        <!-- Tambah item lainnya -->
+                    </ul>
+                    <div class="d-flex justify-content-between">
+                        <strong>Total:</strong> <span>Rp 40.000</span>
+                    </div>
+                    <button class="btn btn-success w-100 mt-3">Proses Pembayaran</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

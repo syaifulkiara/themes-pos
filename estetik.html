@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Kasir</title>
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/font-awesome-6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header dengan navigasi -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="">Kasir POS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Transaksi Baru</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Riwayat Transaksi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Laporan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pengaturan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Konten Utama -->
+<div class="container mt-4">
+<header class="container-fluid pb-3 mb-4 border-bottom">
+    <div class="row justify-content-between align-items-center">
+        <div class="col-12 col-md-4 mb-2 mb-md-0">
+            <h1 class="h4">Transaksi Baru</h1>
+        </div>
+
+        <div class="col-12 col-md-4 mb-2 mb-md-0">
+            <form class="d-flex" role="search">
+                <div class="input-group">
+                    <input class="form-control border-0 shadow-lg" type="search" placeholder="Search" aria-label="Search" aria-describedby="search-icon">
+                    <button type="submit" class="input-group-text bg-gradient-primary text-white border-0" id="search-icon">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-12 col-md-4 text-md-end text-start">
+            <span class="badge bg-primary">Kasir: Admin</span>
+            <span class="badge bg-success">Tanggal: 19 September 2024</span>
+        </div>
+    </div>
+</header>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="category-menu d-flex flex-nowrap mb-4">
+            <a href="#" class="category-item">Category 1</a>
+            <a href="#" class="category-item">Category 2</a>
+            <a href="#" class="category-item">Category 3</a>
+            <a href="#" class="category-item">Category 4</a>
+            <a href="#" class="category-item">Category 5</a>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card product-card">
+                    <img src="assets/img/150.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body text-center">
+                        <h5 class="product-title">Produk 1</h5>
+                        <p class="product-price">Rp 10.000</p>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah ke Keranjang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card product-card">
+                    <img src="assets/img/150.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body text-center">
+                        <h5 class="product-title">Produk 2</h5>
+                        <p class="product-price">Rp 15.000</p>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah ke Keranjang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card product-card">
+                    <img src="assets/img/150.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body text-center">
+                        <h5 class="product-title">Produk 1</h5>
+                        <p class="product-price">Rp 10.000</p>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah ke Keranjang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card product-card">
+                    <img src="assets/img/150.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body text-center">
+                        <h5 class="product-title">Produk 2</h5>
+                        <p class="product-price">Rp 15.000</p>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah ke Keranjang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card product-card">
+                    <img src="assets/img/150.png" class="card-img-top" alt="Product 1">
+                    <div class="card-body text-center">
+                        <h5 class="product-title">Produk 1</h5>
+                        <p class="product-price">Rp 10.000</p>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah ke Keranjang</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card product-card">
+                    <img src="assets/img/150.png" class="card-img-top" alt="Product 2">
+                    <div class="card-body text-center">
+                        <h5 class="product-title">Produk 2</h5>
+                        <p class="product-price">Rp 15.000</p>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah ke Keranjang</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tambah produk lain sesuai kebutuhan -->
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+        <!-- Shopping Cart -->
+        <div class="col-md-4">
+            <div class="cart-container">
+                <div class="cart-header">Keranjang Belanja</div>
+                <div class="cart-item">
+                    <span class="cart-item-name">Produk 1</span>
+                    <span class="cart-item-qty">1 x Rp 10.000</span>
+                </div>
+                <div class="cart-item">
+                    <span class="cart-item-name">Produk 2</span>
+                    <span class="cart-item-qty">2 x Rp 15.000</span>
+                </div>
+
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="total-belanja">Rp 40.000</span>
+                </div>
+
+                <div class="mt-3">
+                    <label for="uang-dibayar" class="form-label">Uang Dibayar:</label>
+                    <input type="number" class="form-control" id="uang-dibayar" placeholder="Masukkan jumlah uang">
+                </div>
+
+                <div class="mt-3">
+                    <label for="kembalian" class="form-label">Kembalian:</label>
+                    <input type="text" class="form-control" id="kembalian" readonly>
+                </div>
+
+                <button class="btn-checkout mt-3 btn btn-success" onclick="hitungKembalian()">Proses Pembayaran</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function hitungKembalian() {
+        const totalBelanja = 40000; // Total belanja tetap, sesuaikan dengan logika Anda
+        const uangDibayar = parseInt(document.getElementById('uang-dibayar').value);
+        const kembalian = uangDibayar - totalBelanja;
+
+        if (kembalian >= 0) {
+            document.getElementById('kembalian').value = 'Rp ' + kembalian.toLocaleString();
+        } else {
+            document.getElementById('kembalian').value = 'Uang tidak cukup';
+        }
+    }
+</script>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

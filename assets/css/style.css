@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+/* Header Menu */
+.navbar {
+    background-color: #343a40;
+}
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #00c851;
+}
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #f8f9fa;
+}
+.navbar-nav .nav-link:hover {
+    color: #00c851;
+}
+
+/* Produk Styling */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+.product-img {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    height: 200px;
+}
+.product-body {
+    padding: 20px;
+    text-align: center;
+}
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+}
+.product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00c851;
+}
+.btn-product {
+    margin-top: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.btn-product:hover {
+    background-color: #0056b3;
+}
+
+
+.nav-link {
+    font-weight: bold;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.cart-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+.cart-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.cart-item:last-child {
+    border-bottom: none;
+}
+.cart-item-name {
+    font-weight: 500;
+}
+.cart-item-qty {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+}
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.btn-checkout {
+    background: linear-gradient(145deg, #00c851, #007e33);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.btn-checkout:hover {
+    background: linear-gradient(145deg, #007e33, #00c851);
+}
+
+
+/**/
+ .bg-gradient-primary {
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-text {
+    font-size: 1.00rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Menu Kategori */
+.category-menu {
+    gap: 10px; /* Jarak antar kategori */
+    overflow-x: auto; /* Aktifkan scrolling horizontal untuk layar kecil */
+    white-space: nowrap; /* Pastikan kategori tidak terpotong */
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.category-item {
+/*    background-color: #007bff;*/
+    color: black;
+    padding: 10px 20px;
+    border-radius: 55px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.category-item:hover {
+    background: linear-gradient(145deg, #00c851, #007e33);
+    transform: translateY(-5px);
+    color: white;
+}
+
+/* Tampilkan lebih banyak kategori berdasarkan ukuran layar */
+@media (max-width: 576px) {
+    /* Pada layar yang sangat kecil (ponsel), tampilkan hanya 2 kategori */
+    .category-item:nth-child(n+3) {
+        display: none;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Pada layar kecil (tablet), tampilkan 4 kategori */
+    .category-item:nth-child(n+5) {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Pada layar sedang (desktop kecil), tampilkan 6 kategori */
+    .category-item:nth-child(n+7) {
+        display: none;
+    }
+}
+
+@media (min-width: 993px) {
+    /* Pada layar besar (desktop), tampilkan semua kategori */
+    .category-item {
+        display: inline-block;
+    }
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.product-price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Custom button styling */
+.btn-add {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+}
+
+/* Make table text smaller for mobile devices */
+@media (max-width: 768px) {
+    .table th, .table td {
+        font-size: 12px;
+    }
+}

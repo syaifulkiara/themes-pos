@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Kasir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Menu */
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #00c851;
+        }
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            color: #f8f9fa;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #00c851;
+        }
+
+        /* Produk Styling */
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+        .product-img {
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            height: 200px;
+        }
+        .product-body {
+            padding: 20px;
+            text-align: center;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #343a40;
+        }
+        .product-price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #00c851;
+        }
+        .btn-product {
+            margin-top: 10px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 50px;
+        }
+        .btn-product:hover {
+            background-color: #0056b3;
+        }
+
+        /* Keranjang Belanja */
+        .cart-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        .cart-card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .cart-item h6 {
+            margin: 0;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .cart-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 20px 0;
+            border-top: 2px solid #eaeaea;
+        }
+        .btn-checkout {
+            width: 100%;
+            background-color: #00c851;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+        }
+        .btn-checkout:hover {
+            background-color: #00a841;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header dengan navigasi -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Kasir POS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Transaksi Baru</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Riwayat Transaksi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Laporan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pengaturan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Konten Utama -->
+<div class="container mt-4">
+    <header class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+        <h1 class="h4">Transaksi Baru</h1>
+        <div>
+            <span class="badge bg-primary badge-custom">Kasir: Admin</span>
+            <span class="badge bg-success badge-custom">Tanggal: 19 September 2024</span>
+        </div>
+    </header>
+
+    <div class="row">
+        <!-- List Produk -->
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/250x200" class="product-img card-img-top" alt="Product 1">
+                <div class="product-body">
+                    <h5 class="product-title">Produk 1</h5>
+                    <p class="product-price">Rp 10.000</p>
+                    <a href="#" class="btn btn-product">Tambah</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/250x200" class="product-img card-img-top" alt="Product 2">
+                <div class="product-body">
+                    <h5 class="product-title">Produk 2</h5>
+                    <p class="product-price">Rp 15.000</p>
+                    <a href="#" class="btn btn-product">Tambah</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/250x200" class="product-img card-img-top" alt="Product 3">
+                <div class="product-body">
+                    <h5 class="product-title">Produk 3</h5>
+                    <p class="product-price">Rp 20.000</p>
+                    <a href="#" class="btn btn-product">Tambah</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keranjang Belanja -->
+    <h2 class="h5 mt-5 mb-4">Keranjang Belanja</h2>
+    <div class="cart-card">
+        <div class="cart-item">
+            <div>
+                <h6>Produk 1</h6>
+                <p>Qty: 2 x Rp 10.000</p>
+            </div>
+            <div>Rp 20.000</div>
+        </div>
+        <div class="cart-item">
+            <div>
+                <h6>Produk 2</h6>
+                <p>Qty: 1 x Rp 15.000</p>
+            </div>
+            <div>Rp 15.000</div>
+        </div>
+        <div class="cart-item">
+            <div>
+                <h6>Produk 3</h6>
+                <p>Qty: 3 x Rp 20.000</p>
+            </div>
+            <div>Rp 60.000</div>
+        </div>
+        <!-- Total Harga -->
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>Rp 95.000</span>
+        </div>
+        <!-- Tombol Checkout -->
+        <button class="btn-checkout">Checkout</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
